@@ -1,3 +1,7 @@
+@php
+    use App\Models\Sppd;
+@endphp
+
 @extends('layouts.app')
 
 @section('title', request()->path() )
@@ -21,7 +25,7 @@
                 @if (session()->get('Login'))
                 <img src="{{ asset('img/gres.png') }}" class="rounded mx-auto d-block img-fluid figure-img"
                     alt="Logo PUSDA" width="20%">
-                <figcaption class=" text-center">Dinas Pekerjaan Umum Sumber Daya Air</figcaption>
+                <figcaption class=" text-center">Dewan Perwakilan Rakyat Daerah (DPRD) Probolinggo</figcaption>
                 <h2 class="text-center">{{ session()->get('Login')  }} {{ $user->nama }}</h2>
                 <br>
                 @endif
@@ -39,7 +43,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">SPPD Berjalan</div>
                                     <div class="col-sm-1">:</div>
-                                    <div class="col-sm-5 text-left"></div>
+                                    <div class="col-sm-5 text-left">{{ SPPD::count() }}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">Total SPPD </div>

@@ -17,32 +17,28 @@
                 <div class="modal-body">
                     <ol style="list-style-type:decimal">
                         @if ($user->role_check(['Admin']))
-                        <li>Admin</li>
-                        <li>Admin</li>
-                        <li>Admin</li>
-                        <li>Admin</li>
-                        <li>Admin</li>
+                        <li>Pengelolaan sistem penuh </li>
+                        <li>(user, pegawai, SPPD, pengaturan instansi)</li>
+                        <li>Cetak Surat</li>
+                        <li>Data profil</li>
                         @endif
                         @if ($user->role_check(['Kepala Bidang']))
-                        <li>Kepala Bidang</li>
-                        <li>Kepala Bidang</li>
-                        <li>Kepala Bidang</li>
-                        <li>Kepala Bidang</li>
-                        <li>Kepala Bidang</li>
+                        <li>Melihat & menyetujui SPPD pada bidangnya</li>
+                        <li>Lihat data pegawai</li>
+                        <li>Lihat semua SPPD</li>
+                        <li>Cetak Surat</li>
+                        <li>Data profil</li>
                         @endif
                         @if ($user->role_check(['Kepala Seksi']))
-                        <li>Kepala Seksi</li>
-                        <li>Kepala Seksi</li>
-                        <li>Kepala Seksi</li>
-                        <li>Kepala Seksi</li>
-                        <li>Kepala Seksi</li>
+                        <li>Monitoring SPPD</li>
+                        <li>Tambah SPPD</li>
+                        <li>Cetak Surat</li>
+                        <li>Data profil</li>
                         @endif
                         @if ($user->role_check(['Staff']))
-                        <li>Staff</li>
-                        <li>Staff</li>
-                        <li>Staff</li>
-                        <li>Staff</li>
-                        <li>Staff</li>
+                        <li>Melihat SPPD pribadi</li>
+                        <li>Tambah SPPD</li>
+                        <li>Data profil</li>
                         @endif
                     </ol>
                 </div>

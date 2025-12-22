@@ -34,7 +34,7 @@
                 {{-- Header Nama dan Logo --}}
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:bold;">
                     <img src="{{ asset('img/gres.png') }}" alt="Logo" width="50px">
-                    {{ config('app.nama', 'SPPD') }} DPU SDA Jawa Timur
+                    {{ config('app.nama', 'SPPD') }} DPRD Kota Probolinggo
                 </a>
                 {{-- Hanya diperlukan kalau ukuran Kecil --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse"

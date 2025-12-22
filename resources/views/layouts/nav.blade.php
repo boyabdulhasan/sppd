@@ -3,7 +3,7 @@
     <hr style="border: 1px solid white; width:100%">
     <a class="nav-link text-white{{ request()->is('Dashboard') ? ' active' : '' }}" href="{{ Route('Dashboard') }}"
         role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-th"></i>&nbsp; Dashboard</a>
-    @if ($user->role_check(['Staff','Kepala Bidang', 'Kepala Seksi']))
+    @if ($user->role_check(['Kepala Bidang']))
     <a class="nav-link text-white{{ request()->is('Pegawai') ? ' active' : '' }}" href="{{ Route('Pegawai') }}"
         role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-users"></i>&nbsp; Pegawai</a>
     @endif
@@ -33,6 +33,10 @@
         </div>
     </div>
     
+    @if ($user->role_check(['Kepala Bidang']))
+    <a class="nav-link text-white{{ request()->is('Admin/SPPD') ? ' active' : '' }}" href="{{ Route('AdminSPPD') }}"
+        role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-envelope"></i>&nbsp; Data SPPD</a>
+    @endif
 
     @if ($user->role_check(['Admin']))
     <a class="nav-link text-white text-left dropdown-toggle" type="button" data-toggle="collapse"
